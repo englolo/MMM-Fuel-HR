@@ -61,4 +61,4 @@ First sett <code>showBrowser: true,</code> <br />
 If the browser is not open, there is probably a problem with the path to the browser or browser it is not installed.<br /> 
 Sett correctly <code>chromiumPath:</code> <br /> 
  example RPi4 <code>chromiumPath:'chromium-browser',</code> <br />
-If the browser pops up, but still does not receiving data, check the entries in the config."# MMM-Fuel-HR" else commit issue.
+If the browser pops up, but still does not receiving data, check the entries in the config.js else commit issue.
