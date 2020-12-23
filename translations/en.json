@@ -1,0 +1,11 @@
+{
+    "PETROL" : "Petrol",
+    "DIESEL" : "Diesel",
+	"CAR_GAS" : "Car gas",
+	"GAS_OIL" : "Gas oil",
+    "OPEN" : "Open",
+	"FROM" : "from",
+	"TO" : "to",
+	"GAS_STATION" : "Gas stations",
+	"PRICE_LIST" : "price list for"
+}

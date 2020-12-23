@@ -1,0 +1,11 @@
+{
+    "PETROL" : "Benzin",
+    "DIESEL" : "Dizel",
+	"CAR_GAS" : "Autoplin",
+	"GAS_OIL" : "Plinsko ulje",
+    "OPEN" : "Otvoreno",
+	"FROM" : "od",
+	"TO" : "do",
+	"GAS_STATION" : "Benzinske postaje",
+	"PRICE_LIST" : "cijenik za "
+}

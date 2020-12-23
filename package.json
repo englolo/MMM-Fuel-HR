@@ -1,0 +1,15 @@
+{
+  "name": "mmm-fuel-hr",
+  "version": "1.0.0",
+  "description": "Module for [MagicMirror] (https://github.com/MichMich/MagicMirror) scraping [mzoe-gor.hr] (https://mzoe-gor.hr/#main-nav-open) for fuel prices, location and distance of various gas stations in Croatia.\r The result is returned as the lowest price in the radius of the selected location.\r ## Screenshot\r ![GitHub Logo](/images/Capture.PNG)\r ## Installation\r Clone this repository into the MagicMirror Modules folder:\r ```\r cd ~/MagicMirror/modules\r git clone https://github.com/englolo/MMM-Fuel-HR.git\r ```\r Install the dependencies (puppeteer, cheerio) in the MMM-Radovi_RI module folder:\r ```\r cd ~/MagicMirror/modules/MMM-Fuel-HR\r npm install\r ```\r ## Configuration",
+  "main": "MMM-Fuel-HR.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "lolo",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "puppeteer": "^5.5.0"
+  }
+}
