@@ -9,30 +9,32 @@ const NodeHelper = require('node_helper');
 const puppeteer = require("puppeteer");
 const cheerio = require('cheerio');
 const url = 'https://mzoe-gor.hr/#main-nav-open';
-
+var self;
 module.exports = NodeHelper.create({
 
     start: function () {
-        self = this; // ? dont know if this is correct but only like thet payload is not mix
-        console.log("Starting node_helper for: " + this.name);
+        self = this; 
+        self.browser;
+	console.log("Starting node_helper for: " + this.name);
     },
 
     socketNotificationReceived: function (notification, payload) {
         if (notification === 'GET_FUEL_DATA') {
-            this.config = payload;
-            getData();
+            self.config = payload;
+            getFuelData();
 
         }
     },
 });
 
-async function getData() {
+async function getFuelData() {
     try {
-        const browser = await puppeteer.launch({
-            executablePath: self.config.chromiumPath,
-            headless: !self.config.showBrowser,
-        });
-        const page = await browser.newPage();
+        if(self.config.chromiumBrowserPath != null){
+		self.browser = await puppeteer.launch({executablePath: self.config.chromiumBrowserPath,  headless : !self.config.showChromiumBrowser }); // headless : false
+	}else{
+		self.browser = await puppeteer.launch({ headless : !self.config.showChromiumBrowser}); // headless : false
+	}
+        const page = await self.browser.newPage();
         await page.goto(url);
 
         await page.waitForSelector('input[id="react-select-2-input"]', {
@@ -41,12 +43,12 @@ async function getData() {
         await page.type('input[id="react-select-2-input"]', self.config.place, {
             delay: 10
         });
-		//await page.waitForTimeout(1000); for testing
+		//await page.waitForTimeout(1000);// for testing
         await page.keyboard.press('Enter');
         await page.select('#trazivrstagoriva', self.config.fuelType.toString());
-		//await page.waitForTimeout(1000); for testing
+		//await page.waitForTimeout(1000); //for testing
         await page.select('#traziradius', self.config.radius.toString());
-        //await page.waitForTimeout(1000); for testing
+        	//await page.waitForTimeout(1000); //for testing
         const html = await page.content();
         const $ = cheerio.load(html)
 
@@ -95,9 +97,9 @@ async function getData() {
 		//console.log("this is Gas Station list:", gasStationList);
         self.sendSocketNotification('GAS_STATION_LIST', gasStationList);
         
-		await browser.close();
+		await self.browser.close();
     } catch (error) {
-        console.error('getData(): ' + error);
+        console.error('getFuelData(): ' + error);
 
     }
 };
