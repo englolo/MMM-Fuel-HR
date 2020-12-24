@@ -1,6 +1,6 @@
 # MMM-Fuel-HR
 
-Module for [MagicMirror](https://github.com/MichMich/MagicMirror) that scrapes [mzoe-gor hr] (https://mzoe-gor.hr/#main-nav-open) for fuel prices, location and distance of various gas stations in Croatia.
+Module for [MagicMirror](https://github.com/MichMich/MagicMirror) that scrapes [mzoe-gor-hr] (https://mzoe-gor.hr/#main-nav-open) for fuel prices, location and distance of various gas stations in Croatia.
 The result is returned as the lowest price in the radius of the selected location. <br />
 It is limit to show up to five OPEN stations in range of radius.
 ## Screenshot
