@@ -1,6 +1,6 @@
 # MMM-Fuel-HR
 
-Module for [MagicMirror](https://github.com/MichMich/MagicMirror) that scrapes [mzoe-gor.hr] (https://mzoe-gor.hr/#main-nav-open) for fuel prices, location and distance of various gas stations in Croatia.
+Module for [MagicMirror](https://github.com/MichMich/MagicMirror) that scrapes [mzoe-gor hr] (https://mzoe-gor.hr/#main-nav-open) for fuel prices, location and distance of various gas stations in Croatia.
 The result is returned as the lowest price in the radius of the selected location. <br />
 It is limit to show up to five OPEN stations in range of radius.
 ## Screenshot
@@ -47,7 +47,7 @@ Add the following data to your config.js file
 | <code>showIcon:</code>|  <code>false, </code>|Show the gas stations icon <br /> false or true|
 | <code>updateInterval:</code>|  <code>2 * 60 * 60 * 1000,</code>|How often should the data be fetched.<br /> Lower the number only if you wont to know if station is open or close otherwise prices are changed once per week.|
 ## How to select location  <code>place:</code>
-Folow link [mzoe-gor.hr] (https://mzoe-gor.hr/#main-nav-open)<br />
+Folow link [mzoe-gor hr](https://mzoe-gor.hr/#main-nav-open)<br />
 In the search box start typing place of interest till you get only one selector or choose one closest, if your place is not listed.<br />
 Now type that selector in the config  <code>place:</code> in the same way as it is.<br /> 
 Most important is that you have onlyone selector shown.
