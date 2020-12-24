@@ -27,7 +27,7 @@ Add the following data to your config.js file
 		place : "Bakar-dio, BAKAR",   //enter the desired place in Croatia!!! check below
                 fuelType: 2, //default  1 
 	        radius : 10,  // default 5 (km)
-		chromiumBrowserPath:null,// depending if using puppeteer chromium browser or something else
+		chromiumBrowserPath:'chromium-browser',// depending if using puppeteer chromium browser or something else
 		
 				}		
 ```
@@ -39,8 +39,8 @@ Add the following data to your config.js file
 | <code>place:</code>| REQUIRED | Enter your place. Description below.. |
 | <code>fuelType:</code>| <code>1,</code>| option: <br />1- PETROL, <br /> 2- DIESEL, <br /> 3- CAR GAS, <br /> 4- GAS OIL|
 | <code>radius:</code>|  <code>1,</code> |option: 5,10,15,25,50 km|
-| <code>chromiumBrowserPath:</code>|  <code>null, </code>| 'chromium-browser'|
-| <code>showChromiumBrowser:</code>|  <code>false, </code>| false or true|
+| <code>chromiumBrowserPath:</code>|  <code>null, </code>|  ```null```if you want to use puppeteer browser in WIN10<br />```'chromium-browser'``` puppeteer browser for RPi4 <br />or use other browser<br />```'/path/to/Chrome'```|
+| <code>showChromiumBrowser:</code>|  <code>false, </code>|  true: show chrome / false: hide chrome|
 | <code>showLogo:</code>|  <code>false, </code>| Show the gas stations logo <br />false or true|
 | <code>showAddress:</code>|  <code>false, </code>|Show the gas stations addrress <br /> false or true|
 | <code>fade:</code>|  <code>false, </code>| false or true|
