@@ -23,13 +23,14 @@ Add the following data to your config.js file
 ```
 {
 	module: "MMM-Fuel-HR",
-	position: "top_right",            
+	position: "top_right",
+	config: {
 		place : "Bakar-dio, BAKAR",   //enter the desired place in Croatia!!! check below
                 fuelType: 2, //default  1 
 	        radius : 10,  // default 5 (km)
 		chromiumBrowserPath:'chromium-browser',// depending if using puppeteer chromium browser or something else
-		
-				}		
+		}
+	 },	
 ```
 ## Config Options
 
